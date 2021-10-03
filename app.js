@@ -2,8 +2,10 @@ const board = document.querySelector('.board');
 const colors = ['red', 'green', 'yellow', 'pink', 'purple', 'blue', 'orange', 'whiteblue'];
 const desksize = document.querySelector('#desksize');
 const createBtn = document.querySelector('.create-button');
+const sizeSelection = document.querySelector('.sizeSelection');
 let squaresNumver = 0;
 createBtn.addEventListener('click', getSquaresNumver);
+sizeSelection.addEventListener('submit', getSquaresNumver);
 
 function drawingField() {
   for (let i = 0; i < squaresNumver; i++) {
@@ -18,10 +20,11 @@ function drawingField() {
   board.append(square);
   }
 }
-function getSquaresNumver() {
-    board.innerHTML = '';
-    squaresNumver = desksize.value;
-    drawingField();
+function getSquaresNumver(event) {
+  event.preventDefault();
+  board.innerHTML = '';
+  squaresNumver = desksize.value;
+  drawingField();
 }
 function setColor(element) {
   const color = getRandomColor();

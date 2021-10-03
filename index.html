@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,18 @@
   <link rel="stylesheet" href="style.css">
   <title>Pixel coloring</title>
 </head>
+
 <body>
   <div class="container">
-    <div class="sizeSelection">
+    <form class="sizeSelection">
       <label for="desksize">Enter the size of the field</label>
       <input type="text" class="desksize" id="desksize" value="500">
-      <button class="create-button">Create</button>
-    </div>
+      <input type="submit" class="create-button" value="Create"></input>
+    </form>
     <div class="board"></div>
   </div>
 
   <script src="app.js"></script>
 </body>
+
 </html>
